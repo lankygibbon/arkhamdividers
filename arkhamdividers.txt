@@ -5,7 +5,7 @@ DPI=300
 CARDSIZE=63,100
 BASERANGE=,ON
 
-LINK="data.xlsx!main"
+LINK="databyset.xlsx!Night of the Zealot"
 
 ;Where should the card generation start? Change this to modify where "Build Deck" starts.
 [STARTINGCARD] = 1
@@ -19,22 +19,18 @@ LINK="data.xlsx!main"
 [RENDERSTART]=[STARTINGCARD]
 [RENDEREND]=[TOTALCARDS]
 
-htmlfont=std,Arial,12,,#000000,center
-
-[LEFT_IMAGE_PATH] = JOIN("arkhamicons/", [LEFT_IMAGE])
-[RIGHT_IMAGE_PATH] = JOIN("arkhamicons/", [RIGHT_IMAGE])
+htmlfont=std,Arial,12,,#000000,left
+HTMLMargins=margin,0,0,0,0,Bottom
+[LEFT_IMAGE_PATH] = JOIN("arkhamicons", [LEFT_IMAGE])
+[RIGHT_IMAGE_PATH] = JOIN("arkhamicons", [RIGHT_IMAGE])
 
 BORDER=RECTANGLE,#000000,0.1,MARKDOT,#0000FF
 
-
-VISUAL=, 10, 10
+HTMLTEXT="1-{(ENCOUNTER)}","<margin>[ENCOUNTER]</margin>",20%,0.4%,{3820/63}%,8.6%,#FFFFFF,0,EFJ,100,std,std
+VISUAL=G, 10, 10
 ;ENCOUNTER
-HTMLTEXT="1-{(ENCOUNTER)}",[ENCOUNTER],{380/21}%,0.4%,{3940/63}%,4.4%,#FFFFFF,0,EFJ,100,std,std
-;LEFT_IMAGE
-IMAGE="1-{(LEFT_IMAGE_PATH)}",[LEFT_IMAGE_PATH],{80/63}%,0.6%,{100/7}%,9%,0,T
-;RIGHT_IMAGE
-IMAGE="1-{(RIGHT_IMAGE_PATH)}",[RIGHT_IMAGE_PATH],{5260/63}%,0.4%,{920/63}%,9.2%,0,T
+
 LINE=,0%,10%,100%,10%,#000000,.2
-;SET
-HTMLTEXT="1-{(SET)}",[SET],{1180/63}%,5%,{3880/63}%,4.4%,#FFFFFF,0,EFJ,100,std,std
+IMAGE="1-{(LEFT_IMAGE_PATH)}",[LEFT_IMAGE_PATH],{220/63}%,0.6%,{40/3}%,8.4%
+IMAGE="1-{(RIGHT_IMAGE_PATH)}",[RIGHT_IMAGE_PATH],{5260/63}%,0.6%,{100/7}%,9%
 ENDVISUAL
