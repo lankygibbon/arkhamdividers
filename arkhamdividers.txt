@@ -5,7 +5,7 @@ DPI=300
 CARDSIZE=63,100
 BASERANGE=,ON
 
-LINK="databyset.xlsx!Night of the Zealot"
+LINK="databyset.xlsx!tnotz"
 
 ;Where should the card generation start? Change this to modify where "Build Deck" starts.
 [STARTINGCARD] = 1
