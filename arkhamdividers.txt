@@ -19,7 +19,7 @@ LINK="databyset.xlsx!tnotz"
 [RENDERSTART]=[STARTINGCARD]
 [RENDEREND]=[TOTALCARDS]
 
-htmlfont=std,Arial,12,,#000000,left
+htmlfont=std,Arkham,12,,#000000,left
 HTMLMargins=std,0,0,0,0,top
 [LEFT_IMAGE_PATH] = JOIN("arkhamicons", [LEFT_IMAGE])
 [RIGHT_IMAGE_PATH] = JOIN("arkhamicons", [RIGHT_IMAGE])
