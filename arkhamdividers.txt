@@ -5,7 +5,14 @@ DPI=300
 CARDSIZE=63,100
 BASERANGE=,ON
 
-LINK="databyset.xlsx!investigator_starter"
+;sets are seperated into sheets using shortcodes
+;Main Campaigns
+;tnotz,tdl,tptc,tfa,tcu,tde,tic,eote,tsc,rt_tnotz,rt_tdl,rt_tptc,rt_tfa,rt_tcu,standalone,parallel
+;Investigator
+;investigator_starter,investigators
+
+
+LINK="databyset.xlsx!tnotz"
 
 ;Where should the card generation start? Change this to modify where "Build Deck" starts.
 [STARTINGCARD] = 1
@@ -19,7 +26,7 @@ LINK="databyset.xlsx!investigator_starter"
 [RENDERSTART]=[STARTINGCARD]
 [RENDEREND]=[TOTALCARDS]
 
-htmlfont=std,Arkham,12,,#000000,left
+htmlfont=std,BirminghamTitlingElongated,12,,#000000,center
 HTMLMargins=std,0,0,0,0,top
 [LEFT_IMAGE_PATH] = JOIN("arkhamicons", [LEFT_IMAGE])
 [RIGHT_IMAGE_PATH] = JOIN("arkhamicons", [RIGHT_IMAGE])
